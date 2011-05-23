@@ -62,3 +62,19 @@
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
 	ignore = dirty
+[submodule "bundle/ir_black"]
+	path = bundle/ir_black
+	url = https://github.com/mtortonesi/vim-irblack.git
+	ignore = dirty
+[submodule "bundle/nerd_commenter"]
+	path = bundle/nerd_commenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+	ignore = dirty
+[submodule "bundle/nerd_tree"]
+	path = bundle/nerd_tree
+	url = https://github.com/scrooloose/nerdtree.git
+	ignore = dirty
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = http://github.com/sjl/gundo.vim.git
+	ignore = dirty
