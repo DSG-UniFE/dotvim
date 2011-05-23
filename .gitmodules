@@ -78,3 +78,23 @@
 	path = bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
 	ignore = dirty
+[submodule "bundle/FuzzyFinder"]
+	path = bundle/FuzzyFinder
+	url = https://github.com/vim-scripts/FuzzyFinder.git
+	ignore = dirty
+[submodule "bundle/scratch"]
+	path = bundle/scratch
+	url = https://github.com/vim-scripts/scratch.vim.git
+	ignore = dirty
+[submodule "bundle/R"]
+	path = bundle/R
+	url = https://github.com/vim-scripts/Vim-R-plugin.git
+	ignore = dirty
+[submodule "bundle/ruby-debugger"]
+	path = bundle/ruby-debugger
+	url = https://github.com/astashov/vim-ruby-debugger.git
+	ignore = dirty
+[submodule "bundle/ruby"]
+	path = bundle/ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+	ignore = dirty
