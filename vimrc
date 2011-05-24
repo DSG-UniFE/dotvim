@@ -401,6 +401,30 @@ endif
 
 
 
+" ******************** FUGITIVE ********************
+
+" This configuration is taken from vimcasts.org (episodes 31-35)
+
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+
+  " Map '..' to go up a level to the parent directory, but only for buffers
+  " containing a git blob or tree
+  autocmd User fugitive
+    \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+    \   nnoremap <buffer> .. :edit %:h<CR> |
+    \ endif
+
+  " Autoclean fugitive buggers
+  autocmd BufReadPost fugitive://* set bufhidden=delete
+
+endif " has("autocmd")
+
+" Show current git branch
+" set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+
+
 " ******************** RVM ********************
 
 " Add RVM information to status line
