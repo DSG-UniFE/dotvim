@@ -98,3 +98,9 @@
 	path = bundle/ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
 	ignore = dirty
+[submodule "bundle/Parameter-Text-Objects"]
+	path = bundle/Parameter-Text-Objects
+	url = https://github.com/vim-scripts/Parameter-Text-Objects.git
+[submodule "bundle/notes.vim"]
+	path = bundle/notes.vim
+	url = https://github.com/vim-scripts/notes.vim.git
