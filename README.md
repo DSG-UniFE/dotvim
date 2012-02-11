@@ -11,7 +11,7 @@ the lines described
 
 ### Automated installation procedure
 
-You can automatically install my Zsh configuration using either wget:
+You can automatically install my Vim configuration using either wget:
 
     wget --no-check-certificate https://github.com/mtortonesi/dotvim/raw/master/install/install.sh -O - | sh
 
