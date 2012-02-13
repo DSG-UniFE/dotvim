@@ -76,7 +76,7 @@
 	ignore = dirty
 [submodule "bundle/gundo"]
 	path = bundle/gundo
-	url = http://github.com/sjl/gundo.vim.git
+	url = https://github.com/sjl/gundo.vim.git
 	ignore = dirty
 [submodule "bundle/FuzzyFinder"]
 	path = bundle/FuzzyFinder
