@@ -29,6 +29,6 @@ Very, very simple:
     wget -O ~/.vim/autoload/pathogen.vim https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim 
     git clone https://github.com/mtortonesi/dotvim.git
     git submodule update --init
-    ln -s vimrc ~/.vimrc
+    ln -s $(pwd)/vimrc ~/.vimrc
     ln -s $(pwd)/bundle/* ~/.vim/bundle
 
