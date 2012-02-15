@@ -28,6 +28,7 @@ Very, very simple:
     mkdir -p $HOME/.vim/{autoload,bundle}
     wget -O ~/.vim/autoload/pathogen.vim https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim 
     git clone https://github.com/mtortonesi/dotvim.git
+    cd dotvim
     git submodule update --init
     ln -s $(pwd)/dotvim ~/.vimrc
     ln -s $(pwd)/bundle/* ~/.vim/bundle
