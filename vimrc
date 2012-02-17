@@ -4,7 +4,8 @@
 " detection, so we place its configuration at the top of the file.
 
 " Load pathogen (http://github.com/tpope/vim-pathogen)
-call pathogen#runtime_append_all_bundles()
+" call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 " Load help tags
 call pathogen#helptags()
