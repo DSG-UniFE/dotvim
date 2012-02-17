@@ -104,3 +104,6 @@
 [submodule "bundle/notes.vim"]
 	path = bundle/notes.vim
 	url = https://github.com/vim-scripts/notes.vim.git
+[submodule "bundle/L9"]
+	path = bundle/L9
+	url = https://github.com/vim-scripts/L9
