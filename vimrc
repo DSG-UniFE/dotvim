@@ -249,6 +249,22 @@ endfunc
 
 
 
+" ******************** POWERLINE ********************
+
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+set encoding=utf-8
+
+
+
+" ******************** CTRL-P ********************
+
+" Set working directory to the nearest ancestor that contains one of these
+" directories or files: .git/ .hg/ .svn/ .bzr/ _darcs/
+let g:ctrlp_working_path_mode = 2
+
+
+
 " ******************** SCRATCH.VIM ********************
 
 " Map <Leader>s to toggle scratch
