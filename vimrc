@@ -49,6 +49,9 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+" Enable local, i.e., per-project, .exrc configuration files.
+set exrc
+
 
 
 " ******************** AUTOCOMMANDS ********************
@@ -451,20 +454,6 @@ command! -bar -nargs=1 OpenURL :!firefox <args>
 imap <C-w> <C-o><C-w>
 
 
-" Setup RSense
-"let g:rsenseHome = expand("~") . "/opt/rsense"
-
-
-" Clear lines
-"noremap <Leader>clr :s/^.*$//<CR>:nohls<CR>
-
-
-" TODO: Decide how to properly deal with backup and swap files
-" set backup " make backup files
-" set backupdir=~/.vim/backup " where to put backup files
-" set directory=~/.vim/tmp " directory to place swap files in
-
-
 " To change current file format:
 " :set fileformat=unix|dos|mac
 
@@ -479,11 +468,7 @@ imap <C-w> <C-o><C-w>
 "  4) space (http://github.com/scrooloose/vim-space)
 "  5) conque (http://www.vim.org/scripts/script.php?script_id=2771)
 "  6) showmarks (http://www.vim.org/scripts/script.php?script_id=152)
-"  7) vim-markdown (http://github.com/sukima/vim-markdown)
-"  8) textile.vim (http://github.com/timcharper/textile.vim)
-"  9) unimpaired (http://github.com/tpope/vim-unimpaired)
 " 10) delimitMate (http://github.com/Raimondi/delimitMate)
-" 11) JSON.vim (http://www.vim.org/scripts/script.php?script_id=1945)
 
 
 
