@@ -42,10 +42,6 @@
 	path = bundle/Color_Sampler_Pack
 	url = https://github.com/vim-scripts/Color-Sampler-Pack
 	ignore = dirty
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
-	ignore = dirty
 [submodule "bundle/ScrollColors"]
 	path = bundle/ScrollColors
 	url = https://github.com/vim-scripts/ScrollColors.git
