@@ -264,7 +264,11 @@ set encoding=utf-8
 
 " Set working directory to the nearest ancestor that contains one of these
 " directories or files: .git/ .hg/ .svn/ .bzr/ _darcs/
-let g:ctrlp_working_path_mode = 2
+let g:ctrlp_working_path_mode = 'rw'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(swp|so|zip)$',
+  \ }
 
 
 
