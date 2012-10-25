@@ -34,10 +34,6 @@
 	path = bundle/file-line
 	url = https://github.com/vim-scripts/file-line.git
 	ignore = dirty
-[submodule "bundle/CSApprox"]
-	path = bundle/CSApprox
-	url = https://github.com/vim-scripts/CSApprox.git
-	ignore = dirty
 [submodule "bundle/Color_Sampler_Pack"]
 	path = bundle/Color_Sampler_Pack
 	url = https://github.com/vim-scripts/Color-Sampler-Pack
