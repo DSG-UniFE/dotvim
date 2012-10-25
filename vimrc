@@ -67,6 +67,9 @@ if has("autocmd")
   " For all text files set 'textwidth' to 78 characters.
   au FileType text  setlocal textwidth=78
 
+  " Java source code: set 4-space indentation
+  au FileType java  setlocal ts=8 sw=4 sts=4 expandtab
+
   " Ruby source code: set 2-space indentation
   au FileType ruby  setlocal ts=8 sw=2 sts=2 expandtab
   au FileType eruby setlocal ts=8 sw=2 sts=2 expandtab
@@ -234,9 +237,6 @@ colorscheme solarized
 
 " Set colors for dark blackground
 set background=dark
-
-" Tell CSApprox to use the Konsole palette
-"let g:CSApprox_konsole=1
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
