@@ -20,7 +20,7 @@ mkdir -p $HOME/.vim/{autoload,bundle}
 
 # Download last version of pathogen.vim
 echo "Downloading pathogen.vim"
-wget -O ~/.vim/autoload/pathogen.vim https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim 
+curl -L -o ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim 
 
 # Backup dotvim if needed
 if [ -d dotvim ]
@@ -41,7 +41,7 @@ git submodule update --init
 
 # Create symlinks
 echo "Creating symlinks"
-ln -s vimrc ~/.vimrc
+ln -s $(pwd)/vimrc ~/.vimrc
 ln -s $(pwd)/bundle/* ~/.vim/bundle
 
 echo "Installation complete!"
