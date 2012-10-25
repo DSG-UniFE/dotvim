@@ -4,7 +4,6 @@
 " detection, so we place its configuration at the top of the file.
 
 " Load pathogen (http://github.com/tpope/vim-pathogen)
-" call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
 
 " Load help tags
@@ -272,18 +271,10 @@ let g:ctrlp_custom_ignore = {
 
 
 
-" ******************** SCRATCH.VIM ********************
+" ******************** TAGBAR ********************
 
-" Map <Leader>s to toggle scratch
-function! ToggleScratch()
-  if expand('%') == g:ScratchBufferName
-    quit
-  else
-    Sscratch
-  endif
-endfunction
-
-map <Leader>s :call ToggleScratch()<CR>
+" F8 toggles the tagbar window
+nmap <F8> :TagbarToggle<CR>
 
 
 
@@ -425,7 +416,7 @@ if has("autocmd")
     \   nnoremap <buffer> .. :edit %:h<CR> |
     \ endif
 
-  " Autoclean fugitive buggers
+  " Autoclean fugitive buffers
   autocmd BufReadPost fugitive://* set bufhidden=delete
 
 endif " has("autocmd")
@@ -468,7 +459,6 @@ imap <C-w> <C-o><C-w>
 
 " Other plugins to consider
 "  1) yankring (http://www.vim.org/scripts/script.php?script_id=1234)
-"  2) taglist (http://www.vim.org/scripts/script.php?script_id=273)
 "  4) space (http://github.com/scrooloose/vim-space)
 "  5) conque (http://www.vim.org/scripts/script.php?script_id=2771)
 "  6) showmarks (http://www.vim.org/scripts/script.php?script_id=152)
