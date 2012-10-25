@@ -228,16 +228,15 @@ vmap <A-Right> >gv
 
 " ******************** COLORS ********************
 
+" Setup solarized color scheme
+set t_co=256
+colorscheme solarized
+
 " Set colors for dark blackground
 set background=dark
 
-" Set color scheme (requires csapprox)
-colorscheme ir_black
-" For presentations:
-" colorscheme ironman
-
 " Tell CSApprox to use the Konsole palette
-let g:CSApprox_konsole=1
+"let g:CSApprox_konsole=1
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
