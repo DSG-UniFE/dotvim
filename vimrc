@@ -231,12 +231,14 @@ vmap <A-Right> >gv
 
 " ******************** COLORS ********************
 
-" Setup solarized color scheme
-set t_co=256
-colorscheme solarized
-
 " Set colors for dark blackground
 set background=dark
+
+" Solarized options
+let g:solarized_termtrans=1
+
+" Setup solarized color scheme
+colorscheme solarized
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>
