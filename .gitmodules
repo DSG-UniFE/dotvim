@@ -117,33 +117,44 @@
 [submodule "bundle/vim-addon-mw-utils"]
 	path = bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+	ignore = dirty
 [submodule "bundle/tlib_vim"]
 	path = bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
+	ignore = dirty
 [submodule "bundle/vim-snipmate"]
 	path = bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
+	ignore = dirty
 [submodule "bundle/snipmate-snippets"]
 	path = bundle/snipmate-snippets
 	url = https://github.com/honza/snipmate-snippets.git
+	ignore = dirty
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+	ignore = dirty
 [submodule "bundle/markdown"]
 	path = bundle/markdown
 	url = https://github.com/tpope/vim-markdown
+	ignore = dirty
 [submodule "bundle/textobj-function"]
 	path = bundle/textobj-function
 	url = https://github.com/kana/vim-textobj-function.git
+	ignore = dirty
 [submodule "bundle/textobj-function-ruby"]
 	path = bundle/textobj-function-ruby
 	url = https://github.com/t9md/vim-textobj-function-ruby.git
+	ignore = dirty
 [submodule "bundle/textobj-line"]
 	path = bundle/textobj-line
 	url = https://github.com/kana/vim-textobj-line.git
+	ignore = dirty
 [submodule "bundle/textobj-entire"]
 	path = bundle/textobj-entire
 	url = https://github.com/kana/vim-textobj-entire.git
+	ignore = dirty
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+	ignore = dirty
