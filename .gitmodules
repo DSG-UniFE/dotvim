@@ -34,10 +34,6 @@
 	path = bundle/file-line
 	url = https://github.com/vim-scripts/file-line.git
 	ignore = dirty
-[submodule "bundle/Color_Sampler_Pack"]
-	path = bundle/Color_Sampler_Pack
-	url = https://github.com/vim-scripts/Color-Sampler-Pack
-	ignore = dirty
 [submodule "bundle/ScrollColors"]
 	path = bundle/ScrollColors
 	url = https://github.com/vim-scripts/ScrollColors.git
@@ -153,4 +149,24 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+	ignore = dirty
+[submodule "bundle/screen"]
+	path = bundle/screen
+	url = https://github.com/ervandew/screen.git
+	ignore = dirty
+[submodule "bundle/vim-seek"]
+	path = bundle/vim-seek
+	url = https://github.com/goldfeld/vim-seek.git
+	ignore = dirty
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+	ignore = dirty
+[submodule "bundle/textobj-word-column"]
+	path = bundle/textobj-word-column
+	url = https://github.com/coderifous/textobj-word-column.vim.git
+	ignore = dirty
+[submodule "bundle/Colour_Sampler_Pack"]
+	path = bundle/Colour_Sampler_Pack
+	url = http://github.com/vim-scripts/Colour-Sampler-Pack
 	ignore = dirty
