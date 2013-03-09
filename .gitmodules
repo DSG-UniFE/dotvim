@@ -170,3 +170,7 @@
 	path = bundle/Colour_Sampler_Pack
 	url = http://github.com/vim-scripts/Colour-Sampler-Pack
 	ignore = dirty
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
+	ignore = dirty

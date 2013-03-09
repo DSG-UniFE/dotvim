@@ -260,6 +260,13 @@ set encoding=utf-8
 
 
 
+" ******************** ACK ********************
+
+" Configure Ack.vim to use ag (AKA the silver searcher)
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+
+
 " ******************** CTRL-P ********************
 
 " Set working directory to the nearest ancestor that contains one of these
@@ -267,7 +274,7 @@ set encoding=utf-8
 let g:ctrlp_working_path_mode = 'rw'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(swp|so|zip)$',
+  \ 'file': '\v(\.swp|\.so|\.zip|\~)$',
   \ }
 
 
