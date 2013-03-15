@@ -174,3 +174,11 @@
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
 	ignore = dirty
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+	ignore = dirty
+[submodule "bundle/zencoding"]
+	path = bundle/zencoding
+	url = https://github.com/mattn/zencoding-vim.git
+	ignore = dirty
