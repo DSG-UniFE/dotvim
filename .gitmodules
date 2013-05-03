@@ -182,3 +182,12 @@
 	path = bundle/zencoding
 	url = https://github.com/mattn/zencoding-vim.git
 	ignore = dirty
+[submodule "bundle/startify"]
+	path = bundle/startify
+	url = https://github.com/mhinz/vim-startify.git
+[submodule "bundle/abolish"]
+	path = bundle/abolish
+	url = https://github.com/tpope/vim-abolish.git
+[submodule "bundle/visual-star-search"]
+	path = bundle/visual-star-search
+	url = https://github.com/nelstrom/vim-visual-star-search.git

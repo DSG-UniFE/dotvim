@@ -179,6 +179,20 @@ let g:secure_modelines_allowed_items = [
             \ "rightleft",   "rl",   "norightleft", "norl"
             \ ]
 
+" Disable arrow keys
+noremap  <Up>    <NOP>
+noremap  <Down>  <NOP>
+noremap  <Left>  <NOP>
+noremap  <Right> <NOP>
+inoremap <Up>    <NOP>
+inoremap <Down>  <NOP>
+inoremap <Left>  <NOP>
+inoremap <Right> <NOP>
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
 
 
 " ******************** INVISIBLE CHARACTERS ********************
@@ -220,12 +234,6 @@ nmap _= :call Preserve("normal gg=G")<CR>
 
 " Remove blank lines
 nmap __ :%g/^$/d<CR>
-
-" Smarter indentation functions
-nmap <A-Left>  <<
-nmap <A-Right> >>
-vmap <A-Left>  <gv
-vmap <A-Right> >gv
 
 
 
