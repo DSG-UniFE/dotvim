@@ -114,14 +114,6 @@
 	path = bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
 	ignore = dirty
-[submodule "bundle/vim-snipmate"]
-	path = bundle/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate.git
-	ignore = dirty
-[submodule "bundle/snipmate-snippets"]
-	path = bundle/snipmate-snippets
-	url = https://github.com/honza/snipmate-snippets.git
-	ignore = dirty
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
@@ -174,10 +166,6 @@
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
 	ignore = dirty
-[submodule "bundle/vim-gitgutter"]
-	path = bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-	ignore = dirty
 [submodule "bundle/zencoding"]
 	path = bundle/zencoding
 	url = https://github.com/mattn/zencoding-vim.git
@@ -185,9 +173,16 @@
 [submodule "bundle/startify"]
 	path = bundle/startify
 	url = https://github.com/mhinz/vim-startify.git
+	ignore = dirty
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = https://github.com/tpope/vim-abolish.git
+	ignore = dirty
 [submodule "bundle/visual-star-search"]
 	path = bundle/visual-star-search
 	url = https://github.com/nelstrom/vim-visual-star-search.git
+	ignore = dirty
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+	ignore = dirty
