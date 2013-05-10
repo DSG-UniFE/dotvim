@@ -11,4 +11,6 @@ if exists(":Tabularize")
   vmap <Leader>a= :Tabularize /=<CR>
   nmap <Leader>a: :Tabularize /:\zs<CR>
   vmap <Leader>a: :Tabularize /:\zs<CR>
+  nmap <Leader>aa :Tabularize /=><CR>
+  vmap <Leader>aa :Tabularize /=><CR>
 endif
