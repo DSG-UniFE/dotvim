@@ -36,7 +36,7 @@ set showcmd
 set incsearch
 
 " Don't use Ex mode, use Q for formatting
-map Q gq
+noremap Q gq
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 set mouse=a
@@ -53,6 +53,13 @@ set exrc
 
 
 
+" ******************** VIMRC ********************
+
+" Set 2-space indentation for .vimrc editing
+setlocal ts=8 sw=2 sts=2 expandtab
+
+
+
 " ******************** AUTOCOMMANDS ********************
 
 " Only do this part when compiled with support for autocommands.
@@ -64,82 +71,101 @@ if has("autocmd")
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on
 
-  " For all text files set 'textwidth' to 78 characters.
-  au FileType text  setlocal textwidth=78
+  augroup text
+    " Make sure to clear any previous settings in this group
+    autocmd!
 
-  " Java source code: set 4-space indentation
-  au FileType java  setlocal ts=8 sw=4 sts=4 expandtab
+    " For all text files set 'textwidth' to 78 characters.
+    autocmd FileType text  setlocal textwidth=78
+  augroup END
 
-  " Ruby source code: set 2-space indentation
-  au FileType ruby  setlocal ts=8 sw=2 sts=2 expandtab
-  au FileType eruby setlocal ts=8 sw=2 sts=2 expandtab
 
-  " Ruby source code: automatically add shabang to new files
-  au BufNewFile *.rb 0put ='#!/usr/bin/env ruby' | norm G
+  augroup java
+    " Make sure to clear any previous settings in this group
+    autocmd!
 
-  " R source code: set 2-space indentation
-  au FileType r     setlocal ts=8 sw=2 sts=2 expandtab
+    " Java source code: set 4-space indentation
+    autocmd FileType java  setlocal ts=8 sw=4 sts=4 expandtab
+  augroup END
 
-  " HTML source code: set 2-space indentation
-  au FileType html  setlocal ts=8 sw=2 sts=2 expandtab
-  au FileType xhtml setlocal ts=8 sw=2 sts=2 expandtab
 
-  " Bourne shell source code: set 4-space indentation
-  au FileType sh    setlocal ts=8 sw=4 sts=4 expandtab
-  au FileType sh    setlocal makeprg=bash\ '%'
+  augroup ruby
+    " Make sure to clear any previous settings in this group
+    autocmd!
 
-  " Bourne shell source code: automatically add shabang to new files
-  au BufNewFile *.sh 0put ='#!/bin/bash' | norm G
+    " Ruby source code: set 2-space indentation
+    autocmd FileType ruby  setlocal ts=8 sw=2 sts=2 expandtab
+    autocmd FileType eruby setlocal ts=8 sw=2 sts=2 expandtab
 
-  " Syntax of these languages is fussy over tabs Vs spaces
-  au FileType make  setlocal ts=8 sts=8 sw=8 noexpandtab
-  au FileType yaml  setlocal ts=2 sts=2 sw=2 expandtab
+    " Ruby source code: automatically add shabang to new files
+    autocmd BufNewFile *.rb 0put ='#!/usr/bin/env ruby' | norm G
+  augroup END
 
-  " Enable cursor line highlighting only in the current window
-  au WinLeave * set nocursorline
-  au WinEnter * set cursorline
 
-  " OmniCppComplete
-  " au FileType c++
-  "   \ set tags+=~/.vim/bundle/omnicppcomplete/tags/std_cpp_tags
-  "   \ " set tags+=~/.vim/bundle/omnicppcomplete/tags/ns3_tags
-  "   \ " build tags of your own project with Ctrl-F12
-  "   \ " map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-  "   \ " use +l to have completion work for local variables as well
-  "   \ " map <C-F12> :!ctags -R --c++-kinds=+pl --fields=+iaS --extra=+q .<CR>
-  "   \ let OmniCpp_NamespaceSearch = 1
-  "   \ let OmniCpp_GlobalScopeSearch = 1
-  "   \ let OmniCpp_ShowAccess = 1
-  "   \ let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-  "   \ let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-  "   \ let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-  "   \ let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
-  "   \ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-  "   \ " automatically open and close the popup menu / preview window
-  "   \ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-  "   \ set completeopt=menuone,menu,longest,preview
+  augroup r
+    " Make sure to clear any previous settings in this group
+    autocmd!
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+    " R source code: set 2-space indentation
+    autocmd FileType r     setlocal ts=8 sw=2 sts=2 expandtab
+  augroup END
+
+
+  augroup html
+    " Make sure to clear any previous settings in this group
+    autocmd!
+
+    " HTML source code: set 2-space indentation
+    autocmd FileType html  setlocal ts=8 sw=2 sts=2 expandtab
+    autocmd FileType xhtml setlocal ts=8 sw=2 sts=2 expandtab
+  augroup END
+
+
+  augroup shell
+    " Make sure to clear any previous settings in this group
+    autocmd!
+
+    " Bourne shell source code: set 4-space indentation
+    autocmd FileType sh    setlocal ts=8 sw=4 sts=4 expandtab
+    autocmd FileType sh    setlocal makeprg=bash\ '%'
+
+    " Bourne shell source code: automatically add shabang to new files
+    autocmd BufNewFile *.sh 0put ='#!/bin/bash' | norm G
+  augroup END
+
+
+  augroup tools
+    " Make sure to clear any previous settings in this group
+    autocmd!
+
+    " Syntax of these languages is fussy over tabs Vs spaces
+    autocmd FileType make  setlocal ts=8 sts=8 sw=8 noexpandtab
+    autocmd FileType yaml  setlocal ts=2 sts=2 sw=2 expandtab
+  augroup END
+
+
+  augroup editing
+    " Make sure to clear any previous settings in this group
+    autocmd!
+
+    " Enable cursor line highlighting only in the current window
+    autocmd WinLeave * set nocursorline
+    autocmd WinEnter * set cursorline
+
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it when the position is invalid or when inside an event handler
+    " (happens when dropping a file on gvim).
+    autocmd BufReadPost *
+      \ if line("'\"") > 0 && line("'\"") <= line("$") |
+      \   exe "normal! g`\"" |
+      \ endif
+  augroup END
 
 else
 
-  set autoindent	" always set autoindenting on
+  set autoindent  " always set autoindenting on
 
 endif " has("autocmd")
-
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		\ | wincmd p | diffthis
-endif
 
 
 
@@ -203,7 +229,7 @@ let mapleader=','
 " This configuration was taken from vimcasts.org (episode 1)
 
 " Shortcut to rapidly toggle `set list`
-nmap <leader>l :set list!<CR>
+nnoremap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
@@ -230,13 +256,13 @@ function! Preserve(command)
 endfunction
 
 " Strip trailing spaces
-nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+nnoremap _$ :call Preserve("%s/\\s\\+$//e")<CR>
 
 " Re-indent the whole file
-nmap _= :call Preserve("normal gg=G")<CR>
+nnoremap _= :call Preserve("normal gg=G")<CR>
 
 " Remove blank lines
-nmap __ :%g/^$/d<CR>
+nnoremap __ :%g/^$/d<CR>
 
 
 
@@ -252,14 +278,25 @@ let g:solarized_termtrans=1
 colorscheme solarized
 
 " Show syntax highlighting groups for word under cursor
-nmap <C-S-P> :call <SID>SynStack()<CR>
+nnoremap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
-	if !exists("*synstack")
-		return
-	endif
-	echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  if !exists("*synstack")
+    return
+  endif
+  echo noremap(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+
+
+" ******************** VIMDIFF ********************
+
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+    \ | wincmd p | diffthis
+endif
 
 
 
@@ -293,7 +330,7 @@ let g:ctrlp_custom_ignore = {
 " ******************** TAGBAR ********************
 
 " F8 toggles the tagbar window
-nmap <F8> :TagbarToggle<CR>
+nnoremap <F8> :TagbarToggle<CR>
 
 
 
@@ -331,31 +368,31 @@ let NERDSpaceDelims=1
 " This configuration is taken (in part) from vimcasts.org (episodes 7 and 8)
 
 " Window navigation shortcuts
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " Commands to move windows around
-" nmap <silent> <A-Up>    :wincmd k<CR>
-" nmap <silent> <A-Down>  :wincmd j<CR>
-" nmap <silent> <A-Left>  :wincmd h<CR>
-" nmap <silent> <A-Right> :wincmd l<CR>
+" nnoremap <silent> <A-Up>    :wincmd k<CR>
+" nnoremap <silent> <A-Down>  :wincmd j<CR>
+" nnoremap <silent> <A-Left>  :wincmd h<CR>
+" nnoremap <silent> <A-Right> :wincmd l<CR>
 
 " Tab navigation shortcuts
-" map <C-1> 1gt
-" map <C-2> 2gt
-" map <C-3> 3gt
-" map <C-4> 4gt
-" map <C-5> 5gt
-" map <C-6> 6gt
-" map <C-7> 7gt
-" map <C-8> 8gt
-" map <C-9> 9gt
-" map <C-0> :tablast<CR>
+" noremap <C-1> 1gt
+" noremap <C-2> 2gt
+" noremap <C-3> 3gt
+" noremap <C-4> 4gt
+" noremap <C-5> 5gt
+" noremap <C-6> 6gt
+" noremap <C-7> 7gt
+" noremap <C-8> 8gt
+" noremap <C-9> 9gt
+" noremap <C-0> :tablast<CR>
 " By default:
-" map <C-PgUp>   gt
-" map <C-PgDown> gT
+" noremap <C-PgUp>   gt
+" noremap <C-PgDown> gT
 
 " Other interesting tab management commands
 " :tabc[lose]	Close the current tab page and all its windows
@@ -368,7 +405,7 @@ map <C-l> <C-w>l
 
 " ******************** BUFFERGATOR ********************
 
-map <Leader>b :BuffergatorToggle<CR>
+noremap <Leader>b :BuffergatorToggle<CR>
 
 
 
@@ -380,10 +417,10 @@ map <Leader>b :BuffergatorToggle<CR>
 " buffer. Additionally, this allows to expand the directory of the current
 " file anywhere at the command line by pressing %%.
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
-map <Leader>ew :e %%
-map <Leader>es :sp %%
-map <Leader>ev :vsp %%
-map <Leader>et :tabe %%
+noremap <Leader>ew :e %%
+noremap <Leader>es :sp %%
+noremap <Leader>ev :vsp %%
+noremap <Leader>et :tabe %%
 
 
 
@@ -408,16 +445,21 @@ nnoremap <F5> :GundoToggle<CR>
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
+ 
+  augroup fugitive
+    " Make sure to clear any previous settings in this group
+    autocmd!
 
-  " Map '..' to go up a level to the parent directory, but only for buffers
-  " containing a git blob or tree
-  autocmd User fugitive
-    \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-    \   nnoremap <buffer> .. :edit %:h<CR> |
-    \ endif
+    " Map '..' to go up a level to the parent directory, but only for buffers
+    " containing a git blob or tree
+    autocmd User fugitive
+      \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+      \   nnoremap <buffer> .. :edit %:h<CR> |
+      \ endif
 
-  " Autoclean fugitive buffers
-  autocmd BufReadPost fugitive://* set bufhidden=delete
+    " Autoclean fugitive buffers
+    autocmd BufReadPost fugitive://* set bufhidden=delete
+  augroup END
 
 endif " has("autocmd")
 
@@ -446,7 +488,7 @@ command! -bar -nargs=1 OpenURL :!firefox <args>
 " ******************** STILL TO CHECK ********************
 
 " Avoid deleting words in insert mode
-imap <C-w> <C-o><C-w>
+inoremap <C-w> <C-o><C-w>
 
 
 " To change current file format:
@@ -463,6 +505,3 @@ imap <C-w> <C-o><C-w>
 "  5) conque (http://www.vim.org/scripts/script.php?script_id=2771)
 "  6) showmarks (http://www.vim.org/scripts/script.php?script_id=152)
 " 10) delimitMate (http://github.com/Raimondi/delimitMate)
-
-
-
