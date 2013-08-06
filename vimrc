@@ -96,9 +96,6 @@ set showcmd
 " Enable incremental searching
 set incsearch
 
-" Don't use Ex mode, use Q for formatting
-noremap Q gq
-
 " In many terminal emulators the mouse works just fine, thus enable it.
 set mouse=a
 
@@ -224,17 +221,18 @@ if has("autocmd")
 
 else
 
-  set autoindent  " always set autoindenting on
+  " TODO: check whether we should disable this for old versions of Vim
+  " Highlight line where cursor is placed
+  set cursorline
+
+  " Always set autoindenting on
+  set autoindent
 
 endif " has("autocmd")
 
 
 
 " ******************** EDITING ********************
-
-" TODO: check whether we should disable this for old versions of Vim
-" Highlight line where cursor is placed
-set cursorline
 
 " Use line numbers
 set number
@@ -282,6 +280,10 @@ vnoremap > >gv
 
 " Use , as <Leader> special character
 let mapleader=','
+
+" Set default encoding
+set encoding=utf-8
+" set fileencoding=utf-8
 
 
 
@@ -338,14 +340,14 @@ let g:solarized_termtrans=1
 " Setup solarized color scheme
 colorscheme solarized
 
-" Show syntax highlighting groups for word under cursor
-nnoremap <C-S-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo noremap(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
+" " Show syntax highlighting groups for word under cursor
+" nnoremap <C-S-P> :call <SID>SynStack()<CR>
+" function! <SID>SynStack()
+"   if !exists("*synstack")
+"     return
+"   endif
+"   echo noremap(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+" endfunc
 
 
 
@@ -365,7 +367,6 @@ endif
 
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
-set encoding=utf-8
 
 
 
