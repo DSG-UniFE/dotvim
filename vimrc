@@ -1,13 +1,74 @@
-" ******************** PATHOGEN ********************
+" ******************** VUNDLE ********************
 
-" It is essential for pathogen to be called before enabling filetype
-" detection, so we place its configuration at the top of the file.
+set nocompatible
+filetype off
 
-" Load pathogen (http://github.com/tpope/vim-pathogen)
-call pathogen#infect()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-" Load help tags
-call pathogen#helptags()
+Bundle 'gmarik/vundle'
+
+
+
+" ******************** PLUGIN LIST ********************
+
+" Plugins on GitHub repositories
+Bundle 'altercation/vim-colors-solarized'
+" Bundle 'astashov/vim-ruby-debugger'
+Bundle 'coderifous/textobj-word-column.vim'
+Bundle 'ervandew/screen'
+Bundle 'godlygeek/tabular'
+Bundle 'goldfeld/vim-seek'
+Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'kana/vim-textobj-entire'
+Bundle 'kana/vim-textobj-function'
+Bundle 'kana/vim-textobj-line'
+Bundle 'kana/vim-textobj-user'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'majutsushi/tagbar'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'mattn/zencoding-vim'
+Bundle 'mhinz/vim-startify'
+Bundle 'mileszs/ack.vim'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'nelstrom/vim-visual-star-search'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/vim-space'
+Bundle 'SirVer/ultisnips'
+Bundle 'sjl/gundo.vim'
+Bundle 't9md/vim-textobj-function-ruby'
+Bundle 'tomtom/tlib_vim'
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-bundler'
+" Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'vim-ruby/vim-ruby'
+
+" Plugins from vim-scripts repositories
+Bundle 'file-line'
+Bundle 'Parameter-Text-Objects'
+Bundle 'Vim-R-plugin'
+
+" Brief help:
+"
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed!
 
 
 
@@ -501,7 +562,6 @@ inoremap <C-w> <C-o><C-w>
 
 " Other plugins to consider
 "  1) yankring (http://www.vim.org/scripts/script.php?script_id=1234)
-"  4) space (http://github.com/scrooloose/vim-space)
 "  5) conque (http://www.vim.org/scripts/script.php?script_id=2771)
 "  6) showmarks (http://www.vim.org/scripts/script.php?script_id=152)
 " 10) delimitMate (http://github.com/Raimondi/delimitMate)
