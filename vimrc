@@ -15,6 +15,7 @@ Bundle 'gmarik/vundle'
 " Plugins on GitHub repositories
 Bundle 'altercation/vim-colors-solarized'
 " Bundle 'astashov/vim-ruby-debugger'
+Bundle 'bling/vim-airline'
 Bundle 'coderifous/textobj-word-column.vim'
 Bundle 'ervandew/screen'
 Bundle 'godlygeek/tabular'
@@ -27,7 +28,6 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'majutsushi/tagbar'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'mattn/zencoding-vim'
@@ -516,7 +516,7 @@ nnoremap <F5> :GundoToggle<CR>
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
- 
+
   augroup fugitive
     " Make sure to clear any previous settings in this group
     autocmd!
