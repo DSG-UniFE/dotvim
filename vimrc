@@ -202,6 +202,15 @@ if has("autocmd")
   augroup END
 
 
+  augroup vim
+    " Make sure to clear any previous settings in this group
+    autocmd!
+
+    " Vimscript source code: set 2-space indentation
+    autocmd FileType vim  setlocal ts=8 sw=2 sts=2 expandtab
+  augroup END
+
+
   augroup editing
     " Make sure to clear any previous settings in this group
     autocmd!
