@@ -536,18 +536,24 @@ if has("autocmd")
 
 endif " has("autocmd")
 
-" Show current git branch
-" set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-
 
 
 " ******************** RVM ********************
 
-" Add RVM information to status line
-" set statusline+=%{rvm#statusline_ft_ruby()}
+" Setup g:ruby_path according to $MY_RUBY_HOME for much speedier startup times
+if !empty($MY_RUBY_HOME)
+  " Add lib/ruby directory
+  let str = glob($MY_RUBY_HOME.'/lib/ruby/*.*')
 
-" Always show status line
-" set laststatus=2
+  " Unless we are using JRuby (which has no lib/ruby/site_ruby), also add the
+  " lib/ruby/site_ruby directory
+  if !empty(matchstr($MY_RUBY_HOME, 'jruby'))
+    let str = str."\n".glob($MY_RUBY_HOME.'/lib/ruby/site_ruby/*')
+  endif
+
+  " Process the globbed stuff
+  let g:ruby_path = join(split(str,"\n"),',')
+endif
 
 
 
