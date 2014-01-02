@@ -337,10 +337,10 @@ function! Preserve(command)
 endfunction
 
 " Strip trailing spaces
-nnoremap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+nnoremap _$ :silent call Preserve("%s/\\s\\+$//e")<CR>
 
 " Re-indent the whole file
-nnoremap _= :call Preserve("normal gg=G")<CR>
+nnoremap _= :silent call Preserve("normal gg=G")<CR>
 
 " Remove blank lines
 nnoremap __ :%g/^$/d<CR>
@@ -359,7 +359,7 @@ let g:solarized_termtrans=1
 colorscheme solarized
 
 " " Show syntax highlighting groups for word under cursor
-" nnoremap <C-S-P> :call <SID>SynStack()<CR>
+" nnoremap <C-S-P> :silent call <SID>SynStack()<CR>
 " function! <SID>SynStack()
 "   if !exists("*synstack")
 "     return
