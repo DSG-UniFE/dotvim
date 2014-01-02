@@ -162,6 +162,12 @@ if has("autocmd")
     autocmd BufNewFile *.rb 0put ='#!/usr/bin/env ruby' | norm G
   augroup END
 
+  augroup c
+    " Make sure to clear any previous settings in this group
+    autocmd!
+
+    autocmd FileType c     setlocal ts=8 sw=8 sts=8 expandtab
+  augroup END
 
   augroup r
     " Make sure to clear any previous settings in this group
