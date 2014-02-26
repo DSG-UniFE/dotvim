@@ -423,10 +423,10 @@ let g:vimrplugin_underscore = 1
 
 " ******************** NERDTREE ********************
 
-" Toggle (open/close) NERDTree with F12
-inoremap <F12> <C-O>:NERDTreeToggle<CR>
-nnoremap <F12> :NERDTreeToggle<CR>
-vnoremap <F12> :NERDTreeToggle<CR>
+" " Toggle (open/close) NERDTree with F12
+" inoremap <F12> <C-O>:NERDTreeToggle<CR>
+" nnoremap <F12> :NERDTreeToggle<CR>
+" vnoremap <F12> :NERDTreeToggle<CR>
 
 
 
@@ -485,7 +485,7 @@ noremap <C-l> <C-w>l
 
 " ******************** BUFFERGATOR ********************
 
-noremap <Leader>b :BuffergatorToggle<CR>
+" noremap <Leader>b :BuffergatorToggle<CR>
 
 
 
