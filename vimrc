@@ -269,6 +269,10 @@ set pastetoggle=<F9>
 " TODO: check if * is the undo register
 inoremap <silent> <C-a> <ESC>u:set paste<CR>p="*:set nopaste<CR>gi
 
+" Select previously pasted text
+" (from: http://vim.wikia.com/wiki/Selecting_your_pasted_text)
+nnoremap gp `[v`]
+
 " Allow to override the following settings via modelines
 let g:secure_modelines_allowed_items = [
             \ "syntax",      "syn",
