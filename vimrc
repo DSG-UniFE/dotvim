@@ -52,6 +52,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-vinegar'
@@ -561,6 +562,15 @@ if !empty($MY_RUBY_HOME)
   " Process the globbed stuff
   let g:ruby_path = join(split(str,"\n"),',')
 endif
+
+
+
+" ******************** VIM-RUBY-DEBUG ********************
+
+let g:ruby_debugger_debug_mode = 1
+let g:ruby_debugger_builtin_sender = 0
+let g:ruby_debugger_progname = 'vim'
+" ~/.vim/tmp/ruby_debugger_output
 
 
 
