@@ -3,69 +3,78 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 
 
 " ******************** PLUGIN LIST ********************
 
 " Plugins on GitHub repositories
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'astashov/vim-ruby-debugger', {'tag':'v1.0'}
-Bundle 'bling/vim-airline'
-Bundle 'coderifous/textobj-word-column.vim'
-Bundle 'ervandew/screen'
-Bundle 'godlygeek/tabular'
-Bundle 'goldfeld/vim-seek'
-" Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'honza/vim-snippets'
-Bundle 'kana/vim-textobj-entire'
-Bundle 'kana/vim-textobj-function'
-Bundle 'kana/vim-textobj-line'
-Bundle 'kana/vim-textobj-user'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'majutsushi/tagbar'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'mattn/emmet-vim'
-Bundle 'mhinz/vim-startify'
-" Bundle 'mileszs/ack.vim'
-Bundle 'rking/ag.vim'
-Bundle 'nelstrom/vim-qargs'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'nelstrom/vim-visual-star-search'
-Bundle 'scrooloose/nerdcommenter'
-" Bundle 'scrooloose/nerdtree'
-" Bundle 'scrooloose/vim-space'
-Bundle 'SirVer/ultisnips'
-Bundle 'sjl/gundo.vim'
-Bundle 't9md/vim-textobj-function-ruby'
-Bundle 'tomtom/tlib_vim'
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-bundler'
-" Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-rvm'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-vinegar'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'elixir-lang/vim-elixir'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'astashov/vim-ruby-debugger', {'tag':'v1.0'}
+Plugin 'bling/vim-airline'
+Plugin 'coderifous/textobj-word-column.vim'
+Plugin 'ervandew/screen'
+Plugin 'godlygeek/tabular'
+Plugin 'goldfeld/vim-seek'
+" Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'honza/vim-snippets'
+Plugin 'kana/vim-textobj-entire'
+Plugin 'kana/vim-textobj-function'
+Plugin 'kana/vim-textobj-line'
+Plugin 'kana/vim-textobj-user'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'majutsushi/tagbar'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'mattn/emmet-vim'
+Plugin 'mhinz/vim-startify'
+" Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
+Plugin 'nelstrom/vim-qargs'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'scrooloose/nerdcommenter'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/vim-space'
+Plugin 'SirVer/ultisnips'
+Plugin 'sjl/gundo.vim'
+Plugin 't9md/vim-textobj-function-ruby'
+Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-bundler'
+" Plugin 'tpope/vim-cucumber'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-rvm'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-vinegar'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'elixir-lang/vim-elixir'
 
 " Plugins from vim-scripts repositories
-Bundle 'file-line'
-Bundle 'Parameter-Text-Objects'
-Bundle 'Vim-R-plugin'
+Plugin 'file-line'
+Plugin 'Parameter-Text-Objects'
+Plugin 'Vim-R-plugin'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+" Enable file type detection. (Also required by Vundle.vim.)
+" Use the default filetype settings, so that mail gets 'tw' set to 72,
+" 'cindent' is on in C files, etc.
+" Also load indent files, to automatically do language-dependent indenting.
+filetype plugin indent on
 
 " Brief help:
 "
@@ -129,12 +138,6 @@ setlocal ts=8 sw=2 sts=2 expandtab
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
-
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
 
   augroup text
     " Make sure to clear any previous settings in this group
