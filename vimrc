@@ -125,6 +125,10 @@ endif
 " Enable local, i.e., per-project, .exrc configuration files.
 set exrc
 
+" Disable annoying K command, that attempts to display man pages
+" (see http://blog.sanctum.geek.nz/vim-annoyances/)
+nnoremap K <nop>
+
 
 
 " ******************** VIMRC ********************
