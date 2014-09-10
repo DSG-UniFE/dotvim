@@ -61,6 +61,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-vinegar'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'embear/vim-localvimrc'
 
 " Plugins from vim-scripts repositories
 Plugin 'file-line'
