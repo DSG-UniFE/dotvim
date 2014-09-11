@@ -17,7 +17,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'astashov/vim-ruby-debugger', {'tag':'v1.0'}
 Plugin 'bling/vim-airline'
 Plugin 'coderifous/textobj-word-column.vim'
-Plugin 'ervandew/screen'
+" Plugin 'ervandew/screen'
 Plugin 'godlygeek/tabular'
 Plugin 'goldfeld/vim-seek'
 " Plugin 'jeetsukumaran/vim-buffergator'
@@ -26,7 +26,7 @@ Plugin 'kana/vim-textobj-entire'
 Plugin 'kana/vim-textobj-function'
 Plugin 'kana/vim-textobj-line'
 Plugin 'kana/vim-textobj-user'
-Plugin 'kchmck/vim-coffee-script'
+" Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'majutsushi/tagbar'
@@ -44,7 +44,7 @@ Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'SirVer/ultisnips'
 Plugin 'sjl/gundo.vim'
 Plugin 't9md/vim-textobj-function-ruby'
-Plugin 'tomtom/tlib_vim'
+" Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-bundler'
 " Plugin 'tpope/vim-cucumber'
@@ -436,7 +436,7 @@ nnoremap <F8> :TagbarToggle<CR>
 " ******************** VIM-R-PLUGIN2 ********************
 
 " Disable '_' to ' -> ' completion in Vim-R-Plugin2
-let g:vimrplugin_underscore = 1
+let g:vimrplugin_assign = 0
 
 
 
