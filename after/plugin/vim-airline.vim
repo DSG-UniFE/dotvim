@@ -1,6 +1,11 @@
 if exists(":AirlineToggle")
   set laststatus=2 " Use 2 lines for the statusbar
-  let g:airline_theme='dark'
+  if exists(':Tmuxline')
+    " lucius works much better inside tmux
+    let g:airline_theme='lucius'
+  else
+    let g:airline_theme='dark'
+  endif
   let g:airline_detect_paste=1
   " let g:airline_enable_syntastic=1
 

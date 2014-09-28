@@ -16,6 +16,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'astashov/vim-ruby-debugger', {'tag':'v1.0'}
 Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
 Plugin 'coderifous/textobj-word-column.vim'
 " Plugin 'ervandew/screen'
 Plugin 'godlygeek/tabular'
