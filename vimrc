@@ -366,13 +366,13 @@ function! Preserve(command)
 endfunction
 
 " Strip trailing spaces
-nnoremap _$ :silent call Preserve("%s/\\s\\+$//e")<CR>
+nnoremap <silent> _$ :call Preserve("%s/\\s\\+$//e")<CR>
 
 " Re-indent the whole file
-nnoremap _= :silent call Preserve("normal gg=G")<CR>
+nnoremap <silent> _= :call Preserve("normal gg=G")<CR>
 
 " Remove blank lines
-nnoremap __ :%g/^$/d<CR>
+nnoremap <silent> __ :%g/^$/d<CR>
 
 
 
