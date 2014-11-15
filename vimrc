@@ -392,15 +392,6 @@ let g:solarized_termtrans=1
 " Setup solarized color scheme
 colorscheme solarized
 
-" " Show syntax highlighting groups for word under cursor
-" nnoremap <C-S-P> :silent call <SID>SynStack()<CR>
-" function! <SID>SynStack()
-"   if !exists("*synstack")
-"     return
-"   endif
-"   echo noremap(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-" endfunc
-
 
 
 " ******************** VIMDIFF ********************
@@ -455,29 +446,7 @@ let g:vimrplugin_assign = 0
 
 
 
-" ******************** NERDTREE ********************
-
-" " Toggle (open/close) NERDTree with F12
-" inoremap <F12> <C-O>:NERDTreeToggle<CR>
-" nnoremap <F12> :NERDTreeToggle<CR>
-" vnoremap <F12> :NERDTreeToggle<CR>
-
-
-
-" ******************** NERDCOMMENTER ********************
-
-" Smart un/comment of whole lines in visual mode
-let NERDCommentWholeLinesInVMode=2
-
-" Insert an extra space after the left delimiter and before the right delimiter
-let NERDSpaceDelims=1
-
-" To comment:   ,cl
-" To uncomment: ,cu
-
-
-
-" ******************** BUFFERS, WINDOWS AND TABS ********************
+" ******************** BUFFERS AND WINDOWS ********************
 
 " This configuration is taken (in part) from vimcasts.org (episodes 7 and 8)
 
@@ -493,34 +462,6 @@ noremap <C-l> <C-w>l
 " nnoremap <silent> <A-Left>  :wincmd h<CR>
 " nnoremap <silent> <A-Right> :wincmd l<CR>
 
-" Tab navigation shortcuts
-" noremap <C-1> 1gt
-" noremap <C-2> 2gt
-" noremap <C-3> 3gt
-" noremap <C-4> 4gt
-" noremap <C-5> 5gt
-" noremap <C-6> 6gt
-" noremap <C-7> 7gt
-" noremap <C-8> 8gt
-" noremap <C-9> 9gt
-" noremap <C-0> :tablast<CR>
-" By default:
-" noremap <C-PgUp>   gt
-" noremap <C-PgDown> gT
-
-" Other interesting tab management commands
-" :tabc[lose]	Close the current tab page and all its windows
-" :tabo[nly]	Close all tabs apart from the current one
-" :tabmove	Move current tab to the end
-" :tabmove 0	Move current tab to the beginning
-" :tabmove 1	Move current tab to become the 2nd tab
-
-
-
-" ******************** BUFFERGATOR ********************
-
-" noremap <Leader>b :BuffergatorToggle<CR>
-
 
 
 " ******************** FILE OPENING SHORTCUTS ********************
@@ -531,10 +472,10 @@ noremap <C-l> <C-w>l
 " buffer. Additionally, this allows to expand the directory of the current
 " file anywhere at the command line by pressing %%.
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
-noremap <Leader>ew :e %%
-noremap <Leader>es :sp %%
-noremap <Leader>ev :vsp %%
-noremap <Leader>et :tabe %%
+" noremap <Leader>ew :e %%
+" noremap <Leader>es :sp %%
+" noremap <Leader>ev :vsp %%
+" noremap <Leader>et :tabe %%
 
 
 
@@ -604,13 +545,6 @@ let g:ruby_debugger_debug_mode = 1
 let g:ruby_debugger_builtin_sender = 0
 let g:ruby_debugger_progname = 'vim'
 " ~/.vim/tmp/ruby_debugger_output
-
-
-
-" ******************** RAILS.VIM ********************
-
-" open URLs w/ firefox
-command! -bar -nargs=1 OpenURL :!firefox <args>
 
 
 
