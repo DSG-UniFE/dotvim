@@ -120,15 +120,11 @@ set showcmd
 " Enable incremental searching
 set incsearch
 
+" Highlight searches
+set hlsearch
+
 " In many terminal emulators the mouse works just fine, thus enable it.
 set mouse=a
-
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-endif
 
 " Enable local, i.e., per-project, .exrc configuration files.
 set exrc
@@ -136,6 +132,12 @@ set exrc
 " Disable annoying K command, that attempts to display man pages
 " (see http://blog.sanctum.geek.nz/vim-annoyances/)
 nnoremap K <nop>
+
+" Switch syntax highlighting on
+syntax enable
+
+" Enable syntax based folding method
+set foldmethod=syntax
 
 
 
