@@ -67,6 +67,9 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'embear/vim-localvimrc'
 
+" Improved incremental search
+Plugin 'haya14busa/incsearch.vim'
+
 " Plugins from vim-scripts repositories
 Plugin 'file-line'
 Plugin 'Parameter-Text-Objects'
@@ -606,6 +609,27 @@ let g:ruby_debugger_progname = 'vim'
 
 " open URLs w/ firefox
 command! -bar -nargs=1 OpenURL :!firefox <args>
+
+
+
+" ******************** IMPROVED INCREMENTAL SEARCH ********************
+
+" Configuration for the haya14busa/incsearch.vim plugin
+
+" Basic configuration
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+" Enable automatic :nohlsearch (:help g:incsearch#auto_nohlsearch)
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 
 
