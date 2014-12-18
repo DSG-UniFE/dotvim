@@ -139,6 +139,10 @@ syntax enable
 " Enable syntax based folding method
 set foldmethod=syntax
 
+" Effectively disable folds unless they are requested
+set foldlevelstart=99
+set foldlevel=99
+
 
 
 " ******************** VIMRC ********************
