@@ -70,6 +70,8 @@ Plugin 'embear/vim-localvimrc'
 " Improved incremental search
 Plugin 'haya14busa/incsearch.vim'
 
+Plugin 'kana/vim-fakeclip'
+
 " Plugins from vim-scripts repositories
 Plugin 'file-line'
 Plugin 'Parameter-Text-Objects'
@@ -395,6 +397,13 @@ let g:solarized_termtrans=1
 
 " Setup solarized color scheme
 colorscheme solarized
+
+
+
+" ******************** FAKECLIP ********************
+
+let g:fakeclip_provide_clipboard_key_mappings =
+      \ has('macunix') && has('gui_gtk2') && !has('gui_running')
 
 
 
