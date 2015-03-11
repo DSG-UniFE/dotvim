@@ -91,6 +91,22 @@ Plugin 'Vim-R-plugin'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
+
+
+" ******************** RUBY VERSION PATH ********************
+
+" Use precalculated g:ruby_version_paths to speed up load time
+" (need to do this before file type detection support is loaded)
+if filereadable(expand("~/.vim_ruby_version_paths"))
+  source $HOME/.vim_ruby_version_paths
+endif
+
+" echomsg string(g:ruby_version_paths)
+
+
+
+" ******************** FILE TYPE DETECTION ********************
+
 " Enable file type detection. (Also required by Vundle.vim.)
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
 " 'cindent' is on in C files, etc.
@@ -531,25 +547,6 @@ if has("autocmd")
   augroup END
 
 endif " has("autocmd")
-
-
-
-" ******************** RVM ********************
-
-" Setup g:ruby_path according to $MY_RUBY_HOME for much speedier startup times
-if !empty($MY_RUBY_HOME)
-  " Add lib/ruby directory
-  let str = glob($MY_RUBY_HOME.'/lib/ruby/*.*')
-
-  " Unless we are using JRuby (which has no lib/ruby/site_ruby), also add the
-  " lib/ruby/site_ruby directory
-  if !empty(matchstr($MY_RUBY_HOME, 'jruby'))
-    let str = str."\n".glob($MY_RUBY_HOME.'/lib/ruby/site_ruby/*')
-  endif
-
-  " Process the globbed stuff
-  let g:ruby_path = join(split(str,"\n"),',')
-endif
 
 
 
