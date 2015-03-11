@@ -360,6 +360,9 @@ let mapleader=','
 set encoding=utf-8
 " set fileencoding=utf-8
 
+" Disable the hideous highlighting of matching paretheses
+let g:loaded_matchparen=1
+
 
 
 " ******************** INVISIBLE CHARACTERS ********************
