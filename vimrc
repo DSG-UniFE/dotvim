@@ -12,48 +12,55 @@ Plugin 'gmarik/Vundle.vim'
 
 " ******************** PLUGIN LIST ********************
 
-" Plugins on GitHub repositories
+" Colors
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'astashov/vim-ruby-debugger', {'tag':'v1.0'}
+Plugin 'flazz/vim-colorschemes'
+
+" Status bar
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
+
+" Text objects
 Plugin 'coderifous/textobj-word-column.vim'
-" Plugin 'ervandew/screen'
-Plugin 'godlygeek/tabular'
-Plugin 'goldfeld/vim-seek'
-" Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'honza/vim-snippets'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'kana/vim-textobj-function'
 Plugin 'kana/vim-textobj-line'
 Plugin 'kana/vim-textobj-user'
-" Plugin 'kchmck/vim-coffee-script'
-Plugin 'kien/ctrlp.vim'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'Parameter-Text-Objects'
+Plugin 't9md/vim-textobj-function-ruby'
+
+" Motion
+Plugin 'goldfeld/vim-seek'
 Plugin 'Lokaltog/vim-easymotion'
+
+" Snippets
+Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+
+" Various (mostly IDE-like functions)
+Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'sjl/gundo.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'file-line'
+
+" Web
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'mattn/emmet-vim'
-Plugin 'mhinz/vim-startify'
-" Plugin 'mileszs/ack.vim'
+
+" Search and args
 Plugin 'rking/ag.vim'
 Plugin 'nelstrom/vim-qargs'
-Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'nelstrom/vim-visual-star-search'
-" Plugin 'scrooloose/nerdcommenter'
-" Plugin 'scrooloose/nerdtree'
-" Plugin 'scrooloose/vim-space'
-Plugin 'SirVer/ultisnips'
-Plugin 'sjl/gundo.vim'
-Plugin 't9md/vim-textobj-function-ruby'
-" Plugin 'tomtom/tlib_vim'
+Plugin 'haya14busa/incsearch.vim' " Improved incremental search
+
+" Tim Pope's stuff
 Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-bundler'
-" Plugin 'tpope/vim-cucumber'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
@@ -64,18 +71,22 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-vinegar'
 Plugin 'vim-ruby/vim-ruby'
+
+" Elixir
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'embear/vim-localvimrc'
 
-" Improved incremental search
-Plugin 'haya14busa/incsearch.vim'
-
+" Fix the broken OS X clipboard
 Plugin 'kana/vim-fakeclip'
 
-" Plugins from vim-scripts repositories
-Plugin 'file-line'
-Plugin 'Parameter-Text-Objects'
+" R
 Plugin 'Vim-R-plugin'
+
+" Not used anymore
+" Plugin 'tpope/vim-bundler'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'embear/vim-localvimrc'
+" Plugin 'mhinz/vim-startify'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -85,16 +96,6 @@ call vundle#end()            " required
 " 'cindent' is on in C files, etc.
 " Also load indent files, to automatically do language-dependent indenting.
 filetype plugin indent on
-
-" Brief help:
-"
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed!
 
 
 
