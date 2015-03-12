@@ -412,11 +412,16 @@ nnoremap <silent> __ :%g/^$/d<CR>
 " Set colors for dark blackground
 set background=dark
 
-" Solarized options
-let g:solarized_termtrans=1
+if $SOLARIZED == '1'
+  " Solarized options
+  let g:solarized_termtrans=1
 
-" Setup solarized color scheme
-colorscheme solarized
+  " Setup solarized color scheme
+  colorscheme solarized
+else
+  " Setup lucius color scheme
+  colorscheme lucius
+endif
 
 
 
