@@ -317,13 +317,13 @@ set hidden
 " Toggle paste mode with F9
 set pastetoggle=<F9>
 
-" C-A fixes text paste problems (seems to work with endwise)
-" TODO: check if * is the undo register
-inoremap <silent> <C-a> <ESC>u:set paste<CR>p="*:set nopaste<CR>gi
 
 " Select previously pasted text
 " (from: http://vim.wikia.com/wiki/Selecting_your_pasted_text)
 nnoremap gp `[v`]
+
+" C-A fixes text paste problems (* is the clipboard register)
+inoremap <silent> <C-a> <ESC>u:set paste<CR>"*p=`]:set nopaste<CR>gi
 
 " Allow to override the following settings via modelines
 let g:secure_modelines_allowed_items = [
@@ -354,10 +354,11 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Use , as <Leader> special character
-let mapleader=','
+let g:mapleader=','
 
-" Set default encoding
+" Set default encoding as UTF-8
 set encoding=utf-8
+scriptencoding utf-8
 " set fileencoding=utf-8
 
 " Disable the hideous highlighting of matching paretheses
@@ -386,14 +387,14 @@ set list
 
 function! Preserve(command)
   " Preparation: save last search, and cursor position.
-  let _s=@/
-  let l = line(".")
-  let c = col(".")
+  let s:_s=@/
+  let s:l = line(".")
+  let s:c = col(".")
   " Do the business:
   execute a:command
   " Clean up: restore previous search history, and cursor position
-  let @/=_s
-  call cursor(l, c)
+  let @/=s:_s
+  call cursor(s:l, s:c)
 endfunction
 
 " Strip trailing spaces
@@ -607,3 +608,5 @@ inoremap <C-w> <C-o><C-w>
 "  5) conque (http://www.vim.org/scripts/script.php?script_id=2771)
 "  6) showmarks (http://www.vim.org/scripts/script.php?script_id=152)
 " 10) delimitMate (http://github.com/Raimondi/delimitMate)
+
+set regexpengine=1
