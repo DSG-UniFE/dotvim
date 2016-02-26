@@ -33,6 +33,7 @@ Plugin 'Parameter-Text-Objects'
 Plugin 't9md/vim-textobj-function-ruby'
 
 " Motion
+Plugin 'kana/vim-smartword'
 Plugin 'goldfeld/vim-seek'
 Plugin 'Lokaltog/vim-easymotion'
 
