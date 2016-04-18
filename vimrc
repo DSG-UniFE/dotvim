@@ -16,11 +16,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'flazz/vim-colorschemes'
 
-" Status bar
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'edkolev/tmuxline.vim'
-
 " Text objects
 Plugin 'coderifous/textobj-word-column.vim'
 Plugin 'kana/vim-textobj-entire'
@@ -68,7 +63,6 @@ Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-rvm'
 Plugin 'tpope/vim-rsi'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
@@ -92,7 +86,7 @@ Plugin 'Vim-R-plugin'
 
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call vundle#end() " required
 
 
 
@@ -139,12 +133,6 @@ set ruler
 " Display incomplete commands
 set showcmd
 
-" Enable incremental searching
-set incsearch
-
-" Highlight searches
-set hlsearch
-
 " In many terminal emulators the mouse works just fine, thus enable it.
 set mouse=a
 
@@ -164,13 +152,6 @@ set foldmethod=syntax
 " Effectively disable folds unless they are requested
 set foldlevelstart=99
 set foldlevel=99
-
-
-
-" ******************** VIMRC ********************
-
-" Set 2-space indentation for .vimrc editing
-setlocal ts=8 sw=2 sts=2 expandtab
 
 
 
@@ -320,7 +301,6 @@ set hidden
 " Toggle paste mode with F9
 set pastetoggle=<F9>
 
-
 " Select previously pasted text
 " (from: http://vim.wikia.com/wiki/Selecting_your_pasted_text)
 nnoremap gp `[v`]
@@ -448,13 +428,6 @@ endif
 
 
 
-" ******************** POWERLINE ********************
-
-let g:Powerline_symbols = 'fancy'
-set laststatus=2
-
-
-
 " ******************** ACK ********************
 
 " Configure Ack.vim to use ag (AKA the silver searcher)
@@ -562,49 +535,16 @@ endif " has("autocmd")
 
 
 
-" ******************** VIM-RUBY-DEBUG ********************
-
-let g:ruby_debugger_debug_mode = 1
-let g:ruby_debugger_builtin_sender = 0
-let g:ruby_debugger_progname = 'vim'
-" ~/.vim/tmp/ruby_debugger_output
-
-
-
-" ******************** IMPROVED INCREMENTAL SEARCH ********************
-
-" Configuration for the haya14busa/incsearch.vim plugin
-
-" Basic configuration
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-
-" Enable automatic :nohlsearch (:help g:incsearch#auto_nohlsearch)
-set hlsearch
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
-
-
-
 " ******************** STILL TO CHECK ********************
 
 " Avoid deleting words in insert mode
 inoremap <C-w> <C-o><C-w>
 
-
 " To change current file format:
 " :set fileformat=unix|dos|mac
 
-
 " set formatoptions=rq " Automatically insert comment leader on return,
 "                      " and let gq format comments
-
 
 " Other plugins to consider
 "  1) yankring (http://www.vim.org/scripts/script.php?script_id=1234)
@@ -612,4 +552,4 @@ inoremap <C-w> <C-o><C-w>
 "  6) showmarks (http://www.vim.org/scripts/script.php?script_id=152)
 " 10) delimitMate (http://github.com/Raimondi/delimitMate)
 
-set regexpengine=1
+" set regexpengine=1
