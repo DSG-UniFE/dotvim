@@ -17,10 +17,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'flazz/vim-colorschemes'
 
 " Status bar
-" Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'edkolev/tmuxline.vim'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'edkolev/tmuxline.vim'
 
 " Text objects
 Plugin 'coderifous/textobj-word-column.vim'
