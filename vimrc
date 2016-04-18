@@ -31,11 +31,6 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'Parameter-Text-Objects'
 Plugin 't9md/vim-textobj-function-ruby'
 
-" Motion
-Plugin 'kana/vim-smartword'
-Plugin 'goldfeld/vim-seek'
-Plugin 'Lokaltog/vim-easymotion'
-
 " Snippets
 Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
@@ -51,11 +46,16 @@ Plugin 'file-line'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'mattn/emmet-vim'
 
-" Search and args
+" Motion, search and args
+Plugin 'kana/vim-smartword'
 Plugin 'rking/ag.vim'
 Plugin 'nelstrom/vim-qargs'
 Plugin 'nelstrom/vim-visual-star-search'
-Plugin 'haya14busa/incsearch.vim' " Improved incremental search
+
+" Haya14busa's stuff
+Plugin 'easymotion/vim-easymotion'
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'haya14busa/incsearch-easymotion.vim'
 
 " Tim Pope's stuff
 Plugin 'tpope/vim-abolish'
