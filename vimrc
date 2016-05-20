@@ -42,7 +42,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'mattn/emmet-vim'
 
 " Motion, search and args
-Plugin 'kana/vim-smartword'
+" Plugin 'kana/vim-smartword'
 Plugin 'rking/ag.vim'
 Plugin 'nelstrom/vim-qargs'
 Plugin 'nelstrom/vim-visual-star-search'
@@ -245,6 +245,15 @@ if has("autocmd")
 
     " Vimscript source code: set 2-space indentation
     autocmd FileType vim  setlocal ts=8 sw=2 sts=2 expandtab
+  augroup END
+
+
+  augroup tex
+    " Make sure to clear any previous settings in this group
+    autocmd!
+
+    " tex: set 2-space indentation
+    autocmd FileType tex setlocal ts=8 sw=2 sts=2 expandtab
   augroup END
 
 
