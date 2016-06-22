@@ -544,6 +544,13 @@ endif " has("autocmd")
 
 
 
+" ******************** CHANGE RUBY HASH FROM 1.8 TO 1.9 SYNTAX ********************
+
+nnoremap <Leader>829 :%s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>
+vnoremap <Leader>829 <ESC>:'<,'>s/:\([^ ]*\)\(\s*\)=>/\1:/g<CR>gv
+
+
+
 " ******************** STILL TO CHECK ********************
 
 " Avoid deleting words in insert mode
